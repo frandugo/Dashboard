@@ -1,0 +1,613 @@
+*{ box-sizing: border-box; }
+body{ font-family: 'Roboto', sans-serif; }
+body.grey{ background: #313131; }
+.pl10{ padding-left: 10px !important; }
+header{
+	background: #eeeeee none repeat scroll 0 0;
+    border-bottom: 1px solid #d8d8d8;
+    height: 50px;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+}
+	h1.logo{
+		float: left;
+	}
+		h1.logo a{
+			background: url('../images/misc/logo.png')no-repeat;
+			display: block;
+			height: 50px;
+			text-indent: -999999px;
+			width: 50px;
+		}
+	.title{
+		border-right: 1px solid #bbb;
+	    float: left;
+	    height: 50px;
+	    line-height: 50px;
+	    margin-right: 10px;
+	    padding: 0 10px;
+	    text-align: center;
+	    width: 200px;
+	}	
+		.title h2{ font-weight: 100; }
+	.snap-drawer .title{
+		border-right: none;
+	}	
+		.snap-drawer .title h2{
+			color: #FFF;
+		}
+	header input[type="text"]{
+		background: #fff url('../images/icn/search.png') no-repeat scroll 10px 7px;
+	    border-radius: 20px;
+	    float: right;
+	    font-size: 14px;
+	    font-weight: 200;
+	    margin-right: 5px;
+	    margin-top: 10px;
+	    padding: 7px 20px 7px 35px;
+	    width: 300px;
+	}
+	header #toolbar {
+		display: none;
+	    float: left;
+	    margin-left: 10px;
+	    margin-top: 16px;
+	    width: 30px;
+	}
+		header #toolbar a {
+		    background: rgba(0, 0, 0, 0) url("../images/icn/menu-icon.png") no-repeat scroll 0 0;
+		    display: inline-block;
+		    height: 18px;
+		    width: 30px;
+		}
+section{
+	margin-top: 50px;
+    position: relative;
+}	
+	aside{
+		background: #22222d none repeat scroll 0 0;
+	    height: calc(100% - 50px);
+	    left: 0;
+	    position: fixed;
+	    top: 50px;
+	    width: 250px;
+	}
+	.snap-drawer aside{
+		height: 100%;
+		position: absolute;
+		width: 266px;
+	}
+		aside .aside-content{ 
+			height: 100%;
+			position: relative; 
+		}	
+			aside ul.inline{
+				overflow: hidden;
+				width: 100%;
+			}
+				aside ul.inline.three li{
+					float: left;
+					width: 33.33%;
+				}
+				aside ul.inline.three li a{
+					background: #15141B;
+					border-bottom: 1px solid #424259; 
+					border-right: 1px solid #424259; 
+					display: block;
+					height: 60px;
+					line-height: 60px;
+					text-align: center;
+					transition: linear 0.2s all;
+				}
+				aside ul.inline.two li{
+					float: left;
+					text-align: center;
+					width: 50%;
+				}
+				aside ul.inline.two li a{
+					background: #22222D; 
+					border-bottom: 1px solid #424259; 
+					color: #FFF;
+					font-weight: 100;
+					font-size: 14px; 
+					display: block;
+					line-height: 40px;
+					padding: 10px;
+					transition: linear 0.2s all;
+				}
+					aside ul.inline.two li a span{ 
+						margin-right: 10px; 
+						position: relative;
+						top: 4px;
+					}
+					aside ul.inline.two li:first-child{
+						display: block; 
+						float: none;
+						text-align: left;
+						width: 100%;
+					}
+						aside ul.inline.two li:first-child a{ background: #15141B;  }
+						aside ul.inline.two li:nth-child(2){ border-right: 1px solid #424259; }
+
+						aside ul.inline li:last-child a{ border-right: 0px; }
+					aside ul.inline li a:hover{ background: #424259; }
+
+				aside ul.footer{
+					bottom: 0px;
+					left: 0px;
+					position: absolute;
+				}
+
+			aside ul.menu li{
+			}	
+				aside ul.menu li a{
+					background: #15141B;
+					border-bottom: 1px solid #424259; 
+					color: #FFF;
+					font-weight: 100;
+					font-size: 14px; 
+					display: block;
+					line-height: 40px;
+					padding: 10px;
+					transition: linear 0.2s all;
+				}
+					aside ul.menu li a:hover{ background: #424259; }
+					aside ul.menu li a span{
+						margin-right: 10px;
+	    				vertical-align: middle;
+					}
+						aside ul.menu li a span.dopen,aside ul.menu li a span.dclose{ position: relative; top: -2px; }	
+
+	.content{
+		background: #EEEEEE;
+		padding-left: 250px;
+		width: 100%;
+	}
+		.content h2{
+			border-bottom: 1px solid #d8d8d8;
+		    color: #666;
+		    font-size: 24px;
+		    font-weight: 100;
+		    padding: 15px;
+		    width: 100%;
+		}
+			.content h2 .infodate{
+				float: right;
+			}
+
+			.content h2 .infodate span{
+				font-size: 12px;
+			}
+				.content h2 .infodate .date{ margin-right: 10px; }
+					.content h2 .infodate .calendar{ position: relative; top: 2px; }
+					.content h2 .infodate .clock{ position: relative; top: 3px; }
+		.content .content-global{
+			padding: 40px;
+		}
+		.content .content-global form{ margin-bottom: 40px; }
+		.content .content-global input[type="text"]{
+			border: 1px solid #ccc;
+			display: block;
+			font-weight: 100;
+			font-size: 16px;
+			margin-bottom: 20px;
+			padding: 10px;
+			width: 100%;
+		}
+		.content .content-global textarea{
+			font-weight: 100;
+			font-size: 16px;
+			height: 200px;
+			resize: none;
+			padding: 10px;
+			width: 100%;
+		}
+		.content .content-global fieldset.inline{
+			display: block;
+		    margin-left: 0;
+		    margin-right: 0;
+		    margin-top: 20px;
+		    padding: 0;
+		    width: 100%;
+		}
+			.content .content-global fieldset.inline input[type="text"]{
+				float: left;
+			    margin-right: 2%;
+			    width: 68%;
+			} 
+			.content .content-global fieldset.inline button{
+				cursor: pointer;
+				padding: 7px 0 8px;
+			    text-align: center;
+			    width: 30%;
+			} 
+				.content .content-global fieldset.inline button span.location{
+					margin-right: 10px;
+					position: relative;
+					top: 3px;
+				}   
+			.content .content-global .map-view{
+				background: #DFFFBF; 
+				display: none;
+				height: 300px;
+				margin-bottom: 20px;
+				width: 100%;
+			}
+			.inputfile + label span{ float: left; }
+				.inputfile + label span.sprite{
+					float: right;
+				    vertical-align: middle;
+				}
+		.image-list{ 
+			margin-bottom: 40px; 
+			overflow: hidden;
+			width: 100%; 
+		}
+			.image-list li{
+				float: left;
+				text-align: center;
+				width: 16.66%;
+			}	
+		table{ width: 100% }
+			table tbody tr td.title{
+				font-weight: 400; 
+				width: 20%; 
+			}	
+			table tbody tr td{ 
+				font-weight: 100;
+				padding: 20px 0;
+				text-align: left;
+				width: 80%; 
+			}
+		.events{ padding: 20px 0; border-top: 1px solid #ccc; }	
+			.events h4{
+				font-weight: 100;
+				font-size: 20px;
+				margin-bottom: 20px;
+			}
+			.events textarea{
+				margin-bottom: 20px;
+			}	
+			.buttons{ margin-bottom: 20px; overflow: hidden; }
+				.buttons .actions{ float: left; }
+					.buttons .actions input{ float: left; margin-right: 20px;}
+					.buttons .actions a{ float: left; }
+				.buttons .add{ float: right; }	
+					.buttons .add a span{ float: left; margin-right: 10px; }	
+
+		.image-profile{
+			border-radius: 100%;
+			height: 113px;
+			margin: 0 auto 40px;
+			overflow: hidden;
+			width: 113px;
+		}	
+		.changepass{ display: none; }		
+		
+		.soporte textarea{ margin-bottom: 20px; }
+		.contact span{ 
+			display: block;
+			font-weight: 100;
+			font-size: 20px;
+			margin-bottom: 10px;
+		}
+		.contact strong{ 
+			display: block;
+			font-size: 20px;
+			margin-bottom: 10px;
+		}
+		.message li {
+			border-bottom: 1px solid #ddd;
+			position: relative;
+		}
+			.message li a{
+				background: #FFF;
+				color: #333;
+				display: block;
+				padding: 20px; 
+			}
+				.message li a span{
+					color: #ccc;
+					font-weight: bold;
+					font-size: 12px;
+					right: 0px;
+					padding: 5px 10px;
+					position: absolute;
+					top: 0px;
+				}
+				.message li a h4{
+					font-size: 16px;
+					margin-bottom: 10px;
+				}
+				.message li a p{
+					font-weight: 100;
+					font-size: 14px;
+					line-height: 28px;
+				}
+
+/* Dash */
+
+.wrapper320 {
+    margin: 0 auto;
+    width: 300px;
+}				
+.dash {
+    overflow: hidden;
+    padding: 100px 0;
+    width: 100%;
+}
+	.dash h2.title {
+		background: #222;
+	    color: #fff;
+	    font-size: 20px;
+	    font-weight: 100;
+	    margin-bottom: 20px;
+	    padding: 10px;
+	    text-align: center;
+	}	
+	.group {
+	    text-align: center;
+	} 
+	form input.user[type="text"] { background: #fefefe url("../images/icn/user.png") no-repeat scroll 5px 12px; padding-left: 30px !important; }
+	form input.pass[type="text"] { background: #fefefe url("../images/icn/padlock.png") no-repeat scroll 8px 12px; padding-left: 30px !important; }
+	form input.email[type="text"] { background: #fefefe url("../images/icn/email.png") no-repeat scroll 7px 16px; padding-left: 30px !important; }
+	form.group input[type="text"] {
+	    border-bottom: 1px solid #ccc;
+	    border-radius: 0;
+	    margin-bottom: 10px;
+	    padding-left: 10px;
+	}
+	form input[type="text"] {
+	    border: 0 none;
+	    box-sizing: border-box;
+	    display: block;
+	    font-size: 14px;
+	    margin-bottom: 20px;
+	    padding: 15px 15px 15px 30px;
+	    width: 100%;
+	} 
+	/*.actions a:first-child {
+    	float: left;
+	}
+	.actions a {
+	    color: #9f9f9f;
+	    font-size: 14px;
+	    font-weight: 200;
+	}
+		.actions a:last-child {
+		    float: right;
+		}
+		.actions.text p {
+		    color: #9f9f9f;
+		    font-size: 14px;
+		    font-weight: 200;
+		}
+		.actions.text a {
+		    display: inline-block;
+		    float: none;
+		    margin: 0 5px;
+		}
+		.actions a:first-child {
+		    float: left;
+		}
+		
+	.group .btn:last-child {
+	    margin-right: 0;
+	}*/
+
+/* Posts */
+
+.post{
+	color: #FFF;
+	display: block;
+	font-weight: 100;
+	margin-bottom: 20px;
+	padding: 20px;
+}
+	.post.red{ background: #E33C28; }
+	.post.yellow{ background: #F1C40E; }
+	.post.green{ background: #2ECC71; }
+	.post .denuncia{
+		position: relative;
+		top: -4px;
+		vertical-align: middle;
+	} 
+	.post .pqr{
+		position: relative;
+		top: -4px;
+		vertical-align: middle;
+	} 
+	.post .consulta{
+		position: relative;
+		top: -1px;
+		vertical-align: middle;
+	} 
+
+/* Buttons */
+
+.btn{
+	display: inline-block;
+	border: none;
+	cursor: pointer;
+	transition: all 0.1s linear 0s;
+	text-decoration: none;
+}
+.btn.medium{
+	font-weight: 100;
+	padding: 9px 9px 8px;
+}
+.btn.medium{
+	font-weight: 200;
+	padding: 10px 30px;
+}
+.btn.dark{
+	background: #333 none repeat scroll 0 0;
+	color: #fff;
+	display: block;
+}
+.btn.red{
+	background: #E64C3C;
+	color: #FFF;
+}
+.btn.big {
+    font-weight: 300;
+    padding: 12px 0;
+    text-transform: uppercase;
+    width: 100%;
+}
+.btn.green {
+    background: #2ECC71 none repeat scroll 0 0;
+    color: #FFF;
+}
+.btn.blue {
+    background: #00beff none repeat scroll 0 0;
+    color: #fff;
+}
+.btn.tac{ text-align: center; }
+.group .btn {
+    margin-right: 20px;
+}
+form input[type="submit"] {
+    margin-bottom: 20px;
+}
+
+/* Sprite */		
+
+.sprite{
+	background: url('../images/icn/sprite.png')no-repeat;
+	display: inline-block;
+}
+	.sprite.user{
+		background-position: 0 -63px;
+		height: 19px;
+		width: 20px;
+	}
+	.sprite.message{
+		background-position: 0 -92px;
+		height: 14px;
+		width: 23px;
+	}
+	.sprite.settings{
+		background-position: 0 -231px;
+		height: 20px;
+		width: 20px;
+	}
+	.sprite.dopen{
+		background-position: 0 -170px;
+		height: 22px;
+		width: 22px;
+	}
+	.sprite.dclose{
+		background-position: 0 -202px;
+		height: 19px;
+		width: 19px;
+	}
+	.sprite.csearch{
+		background-position: 0 -143px;
+		height: 19px;
+		width: 19px;
+	}
+	.sprite.sdown{
+		background-position: 0 -261px;
+		height: 19px;
+		width: 19px;
+	}
+	.sprite.location{
+		background-position: 0 -288px;
+	    height: 18px;
+	    width: 11px;
+	}
+	.sprite.photo{
+		background-position: 0 -347px;
+	    height: 23px;
+	    width: 23px;
+	}
+	.sprite.denuncia{
+		background-position: 0 -169px;
+	    height: 23px;
+	    width: 23px;
+	}
+	.sprite.pqr{
+		background-position: 0 -313px;
+	    height: 24px;
+	    width: 20px;
+	}
+	.sprite.consulta{
+		background-position: 0 -142px;
+	    height: 20px;
+	    width: 20px;
+	}
+	.sprite.calendar{
+		background-position: 0 -402px;
+	    height: 13px;
+	    width: 13px;
+	}
+	.sprite.clock{
+		background-position: 0 -424px;
+	    height: 15px;
+	    width: 15px;
+	}
+	.sprite.add{
+		background-position: 0 -449px;
+	    height: 18px;
+	    width: 18px;
+	}
+
+/* Modal */
+
+.modal {
+    background: rgba(0, 0, 0, 0.9) none repeat scroll 0 0;
+    display: none;
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    transition: all 0.05s linear 0s;
+    width: 100%;
+}
+	.modal .message {
+	    background: #f2f2f2 none repeat scroll 0 0;
+	    border-radius: 10px;
+	    margin: 100px auto 0;
+	    opacity: 0;
+	    padding: 20px 0 0;
+	    position: relative;
+	    text-align: center;
+	    top: -50px;
+	    transition: all 0.05s linear 0s;
+	    width: 300px;
+	}
+		.modal .message p {
+		    font-size: 14px;
+		    font-weight: 100;
+		    padding: 20px;
+		}
+		.modal .message a {
+		    border-radius: 0 0 10px 10px;
+		    box-sizing: border-box;
+		    height: 50px;
+		    line-height: 30px;
+		}
+
+@media (min-width:320px) and (max-width: 900px){
+  .content .content-global fieldset.inline button span.text{ display: none; }
+}
+
+@media (min-width:320px) and (max-width: 610px){
+  header #toolbar{ display: block; }	
+  header input[type="text"]{ width: 82%; }
+  aside{ display: none; }
+  	.snap-drawer aside{ display: block; }
+  h1.logo { display: none; }
+  	.snap-drawer h1.logo { display: block; }
+  .title{ display: none; }
+  	.snap-drawer .title{ display: block; }
+  .content{ padding-left: 0; }
+}
+
+
+		
